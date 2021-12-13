@@ -11,4 +11,4 @@ RUN apk add --no-cache ca-certificates tzdata tini
 USER nobody
 EXPOSE 9087
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["/prometheus_bot"]
+CMD ["/prometheus_bot", "-c", "/etc/telegrambot/config.yaml" , "-l", ":9087"]
